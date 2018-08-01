@@ -80,3 +80,19 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+
+// Custom
+// @import "custom";
+
+ul.tabs {
+  border: none;
+}
+div#tab-description h2 {
+  display: none;
+}
+a.accordion-title {
+  font-size: 2rem;
+  &::before {
+    margin-top: -1rem;
+  }
+}

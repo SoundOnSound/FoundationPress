@@ -9,4 +9,35 @@
 ?>
 <aside class="sidebar">
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
+
+	<!-- Add Platform Custom Field -->
+	<?php
+		$platforms = get_field('platforms');
+		if( $platforms ):
+	?>
+			<h6>Supported Platforms</h6>
+			<ul>
+				<?php foreach( $platforms as $platform ): ?>
+					<li><?php echo $platform; ?></li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
+
+	<!-- Add Windows System Requirements from Custom Field -->
+	<?php if( get_field('windows_system_requirements') ): ?>
+		<h6>Windows System Requirements</h6>
+		<?php the_field('windows_system_requirements'); ?>
+	<?php endif; ?>
+
+	<!-- Add Mac System Requirements from Custom Field -->
+	<?php if( get_field('mac_system_requirements') ): ?>
+		<h6>Mac System Requirements</h6>
+		<?php the_field('mac_system_requirements'); ?>
+	<?php endif; ?>
+
+	<!-- Add SOS Review Link from Custom Field -->
+	<?php if( get_field('sos_review_link') ): ?>
+		<h6>Read The Sound On Sound Review</h6>
+		<a href='<?php the_field('sos_review_link'); ?>' target='_blank'>Read SOS Review</a>
+	<?php endif; ?>
 </aside>
