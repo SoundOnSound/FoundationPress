@@ -1,0 +1,27 @@
+ul.tabs {
+  border: none;
+}
+div#tab-description h2 {
+  display: none;
+}
+a.accordion-title {
+  font-size: 2rem;
+  &::before {
+    margin-top: -1rem;
+  }
+}
+aside.sidebar {
+  padding: 0 1rem;
+  div.product-sidebar {
+    background: #f5f5f5;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    a.sos-review {
+      background: #dd0000;
+      color: white;
+      // display: block;
+      // padding: 5px;
+      text-align: center;
+    }
+  }
+}
