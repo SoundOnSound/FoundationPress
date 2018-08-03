@@ -9,3 +9,11 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
+
+// Get all <li> with class of product and assign variable
+let productItem = document.querySelectorAll('li.product');
+// Loop all <li>
+for( let i = 0; i < productItem.length; i++ ) {
+  // Add card class to each item
+  productItem[i].classList.add('card');
+}

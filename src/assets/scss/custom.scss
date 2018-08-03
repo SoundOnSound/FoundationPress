@@ -12,7 +12,7 @@ a.accordion-title {
 }
 aside.sidebar {
   padding: 0 1rem;
-  div.product-sidebar {
+  div.product-sidebar, section.widget:not(.widget_search) {
     background: #f5f5f5;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -23,5 +23,15 @@ aside.sidebar {
       // padding: 5px;
       text-align: center;
     }
+  }
+}
+
+// Shop page product items
+.woocommerce ul.products li.product h2.woocommerce-loop-product__title, span.price {
+  padding-left: 1rem;
+}
+li.card {
+  &:hover {
+    border: 1px solid #b3b3b3;
   }
 }
