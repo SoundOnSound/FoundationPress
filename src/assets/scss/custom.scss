@@ -35,3 +35,19 @@ li.card {
     border: 1px solid #b3b3b3;
   }
 }
+
+// Homepage
+.home h1, .home h2, .home h3{
+  text-align: center;
+}
+// Featured zones on Homepage
+div.featured-home {
+  text-align: center;
+  padding: 0 0 0 1.5rem;
+  &:nth-child(odd) {
+    background: #f5f5f5;
+    h2 {
+      padding: 1rem;
+    }
+  }
+}

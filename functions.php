@@ -67,3 +67,12 @@ function woo_rename_tabs( $tabs ) {
 	return $tabs;
 
 }
+
+// Remove auto-inserted 'first' and 'last' classes to product li
+add_filter( 'post_class', 'prefix_post_class', 21 );
+function prefix_post_class( $classes ) {
+    if ( 'product' == get_post_type() ) {
+        $classes = array_diff( $classes, array( 'first', 'last' ) );
+    }
+    return $classes;
+}
