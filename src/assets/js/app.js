@@ -17,3 +17,7 @@ for( let i = 0; i < productItem.length; i++ ) {
   // Add card class to each item
   productItem[i].classList.add('card');
 }
+
+// Correctly assign last class to last li item on homepage
+let addLastClass = document.querySelector('ul.columns-4 li.product:last-child, ul.columns-6 li.product:last-child');
+addLastClass.classList.add('last');

@@ -2,7 +2,7 @@
   /* Template Name: Homepage */
   get_header();
 ?>
-<div class="grid-container full home">
+<div class="grid-container fluid home">
   <div class="grid-x">
     <div class="cell">
       <h1>Home</h1>
