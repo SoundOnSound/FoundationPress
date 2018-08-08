@@ -82,7 +82,7 @@
               array(
                   'taxonomy' => 'product_tag',
                   'field' => 'slug',
-                  'terms' => 'fabfilter',
+                  'terms' => 'acon',
                 ),
               ),
             );
@@ -91,7 +91,7 @@
             // Check loop has has posts
             if ( $loopCat->have_posts() ) {
               // Out put HTML for Loop (The above conditional ensures the HTML is output only if there's products within the category in the system)
-              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-tag/fabfilter/\">FabFilter Software</a></h2><ul class=\"products columns-6\">";
+              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-tag/acon/\">Acon Software</a></h2><ul class=\"products columns-6\">";
                 // Run loop
                 while ( $loopCat->have_posts() ) : $loopCat->the_post();
                     wc_get_template_part( 'content', 'product' );

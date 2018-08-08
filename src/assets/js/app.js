@@ -19,5 +19,10 @@ for( let i = 0; i < productItem.length; i++ ) {
 }
 
 // Correctly assign last class to last li item on homepage
-let addLastClass = document.querySelector('ul.columns-4 li.product:last-child, ul.columns-6 li.product:last-child');
+let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
 addLastClass.classList.add('last');
+
+let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-child');
+for( let i = 0; i < addLastClass6.length; i ++ ) {
+  addLastClass6[i].classList.add('last');
+}
