@@ -50,9 +50,9 @@
             'posts_per_page' => 6,
             'tax_query' => array(
               array(
-                  'taxonomy' => 'product_cat',
+                  'taxonomy' => 'product_tag',
                   'field' => 'slug',
-                  'terms' => 'effects',
+                  'terms' => 'fabfilter',
                 ),
               ),
             );
