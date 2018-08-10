@@ -34,7 +34,7 @@
               echo "<div class=\"featured-home\"><h2>Featured Products</h2><ul class=\"products columns-4\">";
                 // Run loop
                 while ( $loop->have_posts() ) : $loop->the_post();
-                    wc_get_template_part( 'content', 'product' );
+                  wc_get_template_part( 'content', 'product' );
                 endwhile;
               // Close ul
               echo "</ul></div>";

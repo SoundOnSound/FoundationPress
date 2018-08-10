@@ -26,3 +26,20 @@ let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-chil
 for( let i = 0; i < addLastClass6.length; i ++ ) {
   addLastClass6[i].classList.add('last');
 }
+
+// Assign coloured badges to product categories
+
+// Get all product category headings
+let catHeading = document.querySelectorAll('h4.product_category_title');
+// Loop the array result from above and build statement to assign style based on category
+for( let i = 0; i < catHeading.length; i ++ ) {
+  if( catHeading[i].innerHTML == 'Uncategorised' ) {
+    catHeading[i].style.background = 'red';
+  } else if( catHeading[i].innerHTML == 'Equalizer' ) {
+    catHeading[i].style.background = 'blue';
+  } else if( catHeading[i].innerHTML == 'Plug-In' ) {
+    catHeading[i].style.background = 'yellow';
+  } else {
+    catHeading[i].style.background = 'green';
+  }
+}

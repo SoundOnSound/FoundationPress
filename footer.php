@@ -8,14 +8,19 @@
  * @since FoundationPress 1.0.0
  */
 ?>
-
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-            <?php dynamic_sidebar( 'footer-widgets' ); ?>
-        </div>
+<div class="grid-container fluid">
+  <div class="grid-x">
+    <div class="cell">
+      <footer class="footer">
+          <div class="footer-container">
+              <div class="footer-grid">
+                  <?php dynamic_sidebar( 'footer-widgets' ); ?>
+              </div>
+          </div>
+      </footer>
     </div>
-</footer>
+  </div>
+</div>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 	</div><!-- Close off-canvas content -->

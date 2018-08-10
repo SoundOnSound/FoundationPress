@@ -76,3 +76,18 @@ function prefix_post_class( $classes ) {
     }
     return $classes;
 }
+
+// Add Product Categories to shop products
+function category_single_product(){
+
+    $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+
+    if ( $product_cats && ! is_wp_error ( $product_cats ) ){
+
+        $single_cat = array_shift( $product_cats ); ?>
+
+        <h4 itemprop="name" class="product_category_title"><?php echo $single_cat->name; ?></h4>
+
+<?php }
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'category_single_product', 5 );
