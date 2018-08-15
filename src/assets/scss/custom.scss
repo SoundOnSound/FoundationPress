@@ -5,9 +5,19 @@
 // Featured zones on Homepage
 div.featured-home {
   &:nth-child(odd) {
-    background: #f5f5f5;
-    h2 {
-      padding: 1rem;
+    // background: #f5f5f5;
+    // padding: 0 1rem 1rem 1rem;
+  }
+  > h2 {
+    padding: 1rem;
+    background: cornflowerblue;
+    color: white;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    a {
+      color: white;
     }
   }
 }
@@ -57,6 +67,38 @@ h4.product_category_title {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+}
+
+/* Flexbox on WooCommerce archive products */
+.woocommerce .products ul,
+.woocommerce ul.products {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+   display: flex;
+   flex-flow: column nowrap;
+   border: 1px solid #cbcbcb;
+   box-sizing: border-box;
+}
+.woocommerce ul.products li.product .button {
+   margin-top: auto;
+   display: table;
+}
+.home .woocommerce ul.products li.product, .home .woocommerce-page ul.products li.product {
+  margin-bottom: 0;
+}
+
+// Add to basket button
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  color: black;
+  font-weight: 400;
+  padding: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 // Footer
