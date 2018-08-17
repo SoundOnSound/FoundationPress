@@ -25,7 +25,7 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 				'id'            => 'footer-widgets',
 				'name'          => __( 'Footer widgets', 'foundationpress' ),
 				'description'   => __( 'Drag widgets to this footer container', 'foundationpress' ),
-				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'before_widget' => '<section id="%1$s" class="widget %2$s cell small-12 medium-6 large-3">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h6>',
 				'after_title'   => '</h6>',
