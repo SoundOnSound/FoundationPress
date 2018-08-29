@@ -72,11 +72,14 @@ h4.product_category_title {
 /* Flexbox on WooCommerce archive products */
 .woocommerce .products ul,
 .woocommerce ul.products {
-   // display: flex;
+   display: flex;
    flex-flow: row wrap;
    justify-content: space-between;
 }
-
+.home .woocommerce .products ul,
+.home .woocommerce ul.products {
+  display: block;
+}
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
    display: flex;
@@ -124,7 +127,6 @@ h4.product_category_title {
     @include xy-cell(3);
   }
 }
-
   ul {
     list-style-type: none;
     margin: 0;
