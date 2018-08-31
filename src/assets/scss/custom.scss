@@ -1,3 +1,75 @@
+nav.top-bar {
+  background: white;
+  div.top-bar-left {
+    flex: 3 1 auto;
+  }
+  div.top-bar-right {
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 auto;
+    section, div.basket-account, div.input-group {
+      display: flex;
+      justify-content: flex-end;
+    }
+    section {
+      flex-basis: 60%;
+      height: 3.5em;
+      .input-group {
+        height: 3.5rem;
+        ::placeholder {
+          padding: 1rem;
+        }
+      }
+      form {
+        width: 100%;
+      }
+      input {
+        max-width: 100%;
+      }
+    }
+    div.basket-account {
+      flex-basis: 40%;
+      justify-content: space-around;
+      button {
+        flex-basis: 44%;
+        margin: 0;
+      }
+    }
+  }
+}
+// Hero
+.hero {
+  height: calc( 100vh - 183px );
+  background: url("http://localhost/sosmusictools/wp-content/themes/FoundationPress/dist/assets/images/hero.jpg");
+  color: white;
+  position: relative;
+  .hero-container {
+    height: 20rem;
+    width: 80%;
+    @include absolute-center;
+    h1 {
+      // padding: 2rem 0 1rem 0;
+    }
+    h2 {
+      padding: 1rem 0 2rem 0;
+    }
+    a {
+      @include horizontal-center;
+      border: 2px solid #b00;
+      border-radius: 3px;
+      position: relative;
+    }
+    h3 {
+      padding: 2rem 0;
+    }
+  }
+}
+.button {
+  background: $sos-red;
+  &:hover {
+    background: $sos-red-hover;
+  }
+}
 // Homepage
 .home h1, .home h2, .home h3, .home .woocommerce ul.products li.product .price {
   text-align: center;
@@ -70,15 +142,21 @@ h4.product_category_title {
 }
 
 /* Flexbox on WooCommerce archive products */
+// Change to home only
 .woocommerce .products ul,
 .woocommerce ul.products {
-   display: flex;
+  // this fixes height of products on shop pages
+  display: block;
+  
+  @include breakpoint(large) {
+  display: flex;
+
+  }
    flex-flow: row wrap;
-   justify-content: space-between;
 }
 .home .woocommerce .products ul,
 .home .woocommerce ul.products {
-  display: block;
+  // display: block;
 }
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
@@ -91,7 +169,8 @@ h4.product_category_title {
    margin-top: auto;
    display: table;
 }
-.home .woocommerce ul.products li.product, .home .woocommerce-page ul.products li.product {
+.home .woocommerce ul.products li.product,
+.home .woocommerce-page ul.products li.product {
   margin-bottom: 0;
 }
 
@@ -109,6 +188,7 @@ h4.product_category_title {
   @include xy-grid-container;
   border-top: 1px solid $medium-gray;
   margin-top: rem-calc(60);
+  max-width: 100%;
 }
 
 .footer-grid {

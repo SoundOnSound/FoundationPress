@@ -31,6 +31,19 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 				'after_title'   => '</h6>',
 			)
 		);
+
+		register_sidebar(
+			array(
+				'id'            => 'header-widgets',
+				'name'          => __( 'Header widgets', 'foundationpress' ),
+				'description'   => __( 'Drag widgets to this header container', 'foundationpress' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s cell small-12 medium-6 large-3">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h6>',
+				'after_title'   => '</h6>',
+			)
+		);
+
 	}
 
 	add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );

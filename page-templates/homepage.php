@@ -2,13 +2,23 @@
   /* Template Name: Homepage */
   get_header();
 ?>
+<div class="grid-container full home">
+  <div class="grid-x">
+    <div class="cell">
+      <div class="hero">
+        <div class="hero-container">
+          <h1>SOS Music Tools</h1>
+          <h2>A One Stop Shop For Instant Software Downloads, Pro Tips and all things Audio.</h2>
+          <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">What does your next project need?</a>
+          <h3>Check Out Our Featured Products</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="grid-container fluid home">
   <div class="grid-x">
     <div class="cell">
-      <h1>Home</h1>
-      <h2>Custom Template 'Homepage'</h2>
-      <h3>Site Description</h3>
-    </div>
     <div class="cell">
       <!-- Set up woocommerce div to correctly inherit styles -->
       <div class="woocommerce">
@@ -61,7 +71,7 @@
             // Check loop has has posts
             if ( $loopCat->have_posts() ) {
               // Out put HTML for Loop (The above conditional ensures the HTML is output only if there's products within the category in the system)
-              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-category/effects/\">Effects Software</a></h2><ul class=\"products columns-6\">";
+              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-tag/fabfilter/\">FabFilter Software</a></h2><ul class=\"products columns-6\">";
                 // Run loop
                 while ( $loopCat->have_posts() ) : $loopCat->the_post();
                     wc_get_template_part( 'content', 'product' );
