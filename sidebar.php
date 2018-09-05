@@ -28,7 +28,7 @@
 		<!-- Add Windows System Requirements from Custom Field -->
 		<?php if( get_field('windows_system_requirements') ): ?>
 			<div class="sidebar-widgets product-sidebar">
-				<h6>Windows System Requirements</h6>
+				<h6><i class="fa fa-lg fa-windows"></i>Windows System Requirements</h6>
 				<?php the_field('windows_system_requirements'); ?>
 			</div>
 		<?php endif; ?>
@@ -36,7 +36,7 @@
 		<!-- Add Mac System Requirements from Custom Field -->
 		<?php if( get_field('mac_system_requirements') ): ?>
 			<div class="sidebar-widgets product-sidebar">
-				<h6>Mac System Requirements</h6>
+				<h6><i class="fa fa-lg fa-apple"></i>Mac System Requirements</h6>
 				<?php the_field('mac_system_requirements'); ?>
 			</div>
 		<?php endif; ?>

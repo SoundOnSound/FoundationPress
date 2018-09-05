@@ -19,8 +19,8 @@ $(document).foundation();
 // }
 
 // Correctly assign last class to last li item on homepage
-let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
-addLastClass.classList.add('last');
+// let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
+// addLastClass.classList.add('last');
 
 let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-child');
 for( let i = 0; i < addLastClass6.length; i ++ ) {
@@ -43,3 +43,8 @@ for( let i = 0; i < catHeading.length; i ++ ) {
     catHeading[i].style.background = 'green';
   }
 }
+
+// let dashboard = document.querySelector('.woocommerce-MyAccount-navigation-link--dashboard');
+// console.log(dashboard);
+// let dashboardIcon = document.createElement('<i class="fa fa-tachometer-alt"></i>')
+// dashboard.appendChild(dashboardIcon);

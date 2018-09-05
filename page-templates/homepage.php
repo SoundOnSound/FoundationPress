@@ -8,7 +8,7 @@
       <div class="hero">
         <div class="hero-container">
           <h1>SOS Music Tools</h1>
-          <h2>A One Stop Shop For Instant Software Downloads, Pro Tips and all things Audio.</h2>
+          <h2>A One Stop Shop For Instant Software Downloads,<br /> Pro Tips And All Things Audio.</h2>
           <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">What does your next project need?</a>
           <h3>Check Out Our Featured Products</h3>
         </div>

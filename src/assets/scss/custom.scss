@@ -1,3 +1,4 @@
+// Navigation
 nav.top-bar {
   background: white;
   div.top-bar-left {
@@ -30,9 +31,11 @@ nav.top-bar {
     div.basket-account {
       flex-basis: 40%;
       justify-content: space-around;
-      button {
+      .button {
         flex-basis: 44%;
         margin: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
     }
   }
@@ -82,7 +85,7 @@ div.featured-home {
   }
   > h2 {
     padding: 1rem;
-    background: cornflowerblue;
+    background: $sos-red;
     color: white;
     margin: 2rem 0;
     text-transform: uppercase;
@@ -93,6 +96,7 @@ div.featured-home {
     }
   }
 }
+// Product Page
 ul.tabs {
   border: none;
 }
@@ -147,7 +151,7 @@ h4.product_category_title {
 .woocommerce ul.products {
   // this fixes height of products on shop pages
   display: block;
-  
+
   @include breakpoint(large) {
   display: flex;
 
@@ -173,7 +177,19 @@ h4.product_category_title {
 .home .woocommerce-page ul.products li.product {
   margin-bottom: 0;
 }
-
+// Shop Page Sidebar
+aside.sidebar section.widget {
+  h6 {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .9rem;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+}
 // Add to basket button
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
   color: black;
@@ -211,5 +227,62 @@ h4.product_category_title {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+}
+/* Icons */
+.fa {
+  // padding-right: 5px;
+}
+.fa-basket:before, .fa-user:before {
+  padding-right: 5px;
+}
+.fa-arrow-circle-right {
+  padding-left: 10px;
+}
+.fa-windows:before, .fa-apple:before {
+  padding-right: 10px;
+}
+
+// My Account
+.woocommerce-account .woocommerce {
+  margin-top: 2rem;
+  nav.woocommerce-MyAccount-navigation {
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      li {
+        padding: 1rem 1rem 1rem 1rem;
+        border: 1px solid $medium-gray;
+        border-top: none;
+        &:hover {
+          background-color: $light-gray;
+        }
+        &:first-child {
+          border-top: 1px solid $medium-gray;
+        }
+        // Removes downloads tab from My Account. XChange Download are listed under orders not downloads.
+        &:nth-child(3) {
+          display: none;
+        }
+        a {
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: .9rem;
+        }
+      }
+      .is-active {
+        background-color: $medium-gray;
+        a {
+          color: white;
+        }
+      }
+      // .woocommerce-MyAccount-navigation-link--dashboard::before {
+      //   font-family: 'Font Awesome 5 Free';
+      //   font-weight: 900;
+      //   display: inline-block;
+      //   content: "\f3fd";
+      // }
+    }
   }
 }

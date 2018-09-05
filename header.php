@@ -47,8 +47,8 @@
 							<?php // foundationpress_top_bar_r(); ?>
 							<?php dynamic_sidebar( 'header-widgets' ); ?>
 							<div class="basket-account">
-								<button class="button">Basket</button>
-								<button class="button">My Account</button>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button"><i class="fa fa-shopping-basket"></i> Basket</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button"><i class="fa fa-user"></i>Account</a>
 							</div>
 						</div>
 					</nav>
