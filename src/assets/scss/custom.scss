@@ -37,6 +37,12 @@ nav.top-bar {
         font-size: 1rem;
         line-height: 1.5rem;
       }
+      #logout-dropdown {
+        width: rem-calc(140px);
+        .button {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -230,14 +236,29 @@ aside.sidebar section.widget {
   }
 }
 /* Icons */
-.fa {
-  // padding-right: 5px;
-}
-.fa-basket:before, .fa-user:before {
+.fa-shopping-basket:before, .fa-sign-out-alt:before {
   padding-right: 5px;
 }
-.fa-arrow-circle-right {
-  padding-left: 10px;
+#search-icon {
+  position: relative;
+  display: flex;
+  &:before {
+    color: white;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "\f002";
+  }
+  input {
+    text-indent: 15px;    
+  }
+}
+
+.fa-user:before {
+  padding-right: 10px;
 }
 .fa-windows:before, .fa-apple:before {
   padding-right: 10px;
@@ -254,6 +275,7 @@ aside.sidebar section.widget {
         padding: 1rem 1rem 1rem 1rem;
         border: 1px solid $medium-gray;
         border-top: none;
+        background: $medium-gray;
         &:hover {
           background-color: $light-gray;
         }
@@ -272,17 +294,39 @@ aside.sidebar section.widget {
         }
       }
       .is-active {
-        background-color: $medium-gray;
+        background-color: white;
+        border-right: none;
         a {
-          color: white;
+          color: black;
         }
       }
-      // .woocommerce-MyAccount-navigation-link--dashboard::before {
-      //   font-family: 'Font Awesome 5 Free';
-      //   font-weight: 900;
-      //   display: inline-block;
-      //   content: "\f3fd";
-      // }
+      .woocommerce-MyAccount-navigation-link a:before {
+        padding-right: 10px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+      }
+      .woocommerce-MyAccount-navigation-link--dashboard a:before {
+        content: "\f3fd";
+      }
+      .woocommerce-MyAccount-navigation-link--orders a:before {
+        content: "\f291";
+      }
+      .woocommerce-MyAccount-navigation-link--edit-address a:before {
+        content: "\f2b9";
+      }
+      .woocommerce-MyAccount-navigation-link--edit-account a:before {
+        content: "\f007";
+      }
+      .woocommerce-MyAccount-navigation-link--customer-logout a:before {
+        content: "\f2f5";
+      }
     }
+  }
+}
+
+// Mobile Only
+@media only screen and (max-width: 40em) {
+  .site-navigation {
+    display: none;
   }
 }

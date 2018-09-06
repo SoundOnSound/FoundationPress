@@ -10,7 +10,7 @@
           <h1>SOS Music Tools</h1>
           <h2>A One Stop Shop For Instant Software Downloads,<br /> Pro Tips And All Things Audio.</h2>
           <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">What does your next project need?</a>
-          <h3>Check Out Our Featured Products</h3>
+          <h3>Check Out Our Featured Products Below</h3>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import Foundation from 'foundation-sites';
 
 $(document).foundation();
 
+
 // // Get all <li> with class of product and assign variable
 // let productItem = document.querySelectorAll('li.product');
 // // Loop all <li>
@@ -18,9 +19,24 @@ $(document).foundation();
 //   productItem[i].classList.add('card');
 // }
 
+// let dashboard = document.querySelector('.woocommerce-MyAccount-navigation-link--dashboard');
+// console.log(dashboard);
+// let dashboardIcon = document.createElement('I')
+// let fa = 'fas';
+// let faClass = 'fa-tachometer-alt';
+// dashboardIcon.classList.add(fa, faClass);
+// dashboard.appendChild(dashboardIcon);
+
+// Prevents link on Manufacturer menu item. Change ID on Live
+let manufacturerLink = document.querySelector('#menu-item-128 a');
+console.log(manufacturerLink);
+manufacturerLink.addEventListener('click', function(e) {
+  e.preventDefault();
+})
+
 // Correctly assign last class to last li item on homepage
-// let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
-// addLastClass.classList.add('last');
+let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
+addLastClass.classList.add('last');
 
 let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-child');
 for( let i = 0; i < addLastClass6.length; i ++ ) {
@@ -43,8 +59,3 @@ for( let i = 0; i < catHeading.length; i ++ ) {
     catHeading[i].style.background = 'green';
   }
 }
-
-// let dashboard = document.querySelector('.woocommerce-MyAccount-navigation-link--dashboard');
-// console.log(dashboard);
-// let dashboardIcon = document.createElement('<i class="fa fa-tachometer-alt"></i>')
-// dashboard.appendChild(dashboardIcon);

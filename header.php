@@ -47,13 +47,21 @@
 							<?php // foundationpress_top_bar_r(); ?>
 							<?php dynamic_sidebar( 'header-widgets' ); ?>
 							<div class="basket-account">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button"><i class="fa fa-shopping-basket"></i> Basket</a>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button"><i class="fa fa-user"></i>Account</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button"><i class="fas fa-shopping-basket"></i> Basket</a>
+								<?php if (is_user_logged_in()) : ?>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="logout-dropdown"><i class="fa fa-user"></i>Account</a>
+									<div class="dropdown-pane" id="logout-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+								  	<a class="button" href="<?php echo wp_logout_url(); ?>"><i class="fas fa-sign-out-alt"></i>Logout</a>
+									</div>
+								<?php else : ?>
+										<a href="" class="button" data-toggle="login-dropdown"><i class="fa fa-user"></i>Login</a>
+										<div class="dropdown-pane" id="login-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+										 <?php wp_login_form( $args ); ?>
+										</div>
+								<?php endif; ?>
 							</div>
 						</div>
 					</nav>
-
-
 				</header>
 			</div>
 		</div>
