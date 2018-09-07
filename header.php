@@ -47,7 +47,15 @@
 							<?php // foundationpress_top_bar_r(); ?>
 							<?php dynamic_sidebar( 'header-widgets' ); ?>
 							<div class="basket-account">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button"><i class="fas fa-shopping-basket"></i> Basket</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button" data-toggle="basket-dropdown"><i class="fas fa-shopping-basket"></i> Basket<?php
+									$count = WC()->cart->cart_contents_count;
+									if ( $count > 0 ) {
+										echo "<span class='basket-count'>{$count}</span>";
+									}
+								?></a>
+								<div class="dropdown-pane" id="basket-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+									<a class="basket-header" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View Your Shopping Basket' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+								</div>
 								<?php if (is_user_logged_in()) : ?>
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="logout-dropdown"><i class="fa fa-user"></i>Account</a>
 									<div class="dropdown-pane" id="logout-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
