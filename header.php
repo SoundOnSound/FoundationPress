@@ -30,16 +30,17 @@
 						<div class="title-bar-left">
 							<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 							<span class="site-mobile-title title-bar-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<img class="logo-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sosmusictools-logo.svg" alt="SOS Music Tools Logo" width="" height="40">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 							</span>
 						</div>
 					</div>
 
-					<nav class="site-navigation top-bar top-nav" role="navigation">
+					<nav class="site-navigation top-bar top-nav show-for-medium" role="navigation">
 						<div class="top-bar-left">
 							<div class="site-desktop-title top-bar-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sosmusictools-logo-200.png" alt="SOS Music Tools Logo" width="200" height="123">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sosmusictools-logo.svg" alt="SOS Music Tools Logo" width="187" height="123">
 								</a>
 							</div>
 						</div>
@@ -47,15 +48,12 @@
 							<?php // foundationpress_top_bar_r(); ?>
 							<?php dynamic_sidebar( 'header-widgets' ); ?>
 							<div class="basket-account">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button" data-toggle="basket-dropdown"><i class="fas fa-shopping-basket"></i> Basket<?php
-									$count = WC()->cart->cart_contents_count;
-									if ( $count > 0 ) {
-										echo "<span class='basket-count'>{$count}</span>";
-									}
-								?></a>
-								<div class="dropdown-pane" id="basket-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
-									<a class="basket-header" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View Your Shopping Basket' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
-								</div>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/basket" class="button" data-toggle="basket-dropdown"><i class="fas fa-shopping-basket"></i>Basket
+									<span class="basket-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+								</a>
+								<!-- <div class="dropdown-pane" id="basket-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
+									<a class="basket-dropdown" href="<?php // echo wc_get_cart_url(); ?>" title="<?php // _e( 'View Your Shopping Basket' ); ?>"><?php // echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php // echo WC()->cart->get_cart_total(); ?></a>
+								</div> -->
 								<?php if (is_user_logged_in()) : ?>
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="logout-dropdown"><i class="fa fa-user"></i>Account</a>
 									<div class="dropdown-pane" id="logout-dropdown" data-dropdown data-hover="true" data-hover-pane="true">

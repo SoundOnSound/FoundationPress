@@ -65,15 +65,13 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	ob_start();
 
 	?>
-	<a class="basket-header" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View Your Shopping Basket', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	
+	<span class="basket-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
 	<?php
-	$fragments['a.basket-header'] = ob_get_clean();
-	$count = WC()->cart->cart_contents_count;
-	if ( $count > 0 ) {
-		echo "<span class='basket-count'>{$count}</span>";
-	}
+	$fragments['span.basket-count'] = ob_get_clean();
 	return $fragments;
 }
+
 
 /**
  * Rename product data tabs

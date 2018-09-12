@@ -1,4 +1,16 @@
+
+
 // Navigation
+// --------------
+.title-bar {
+  background: white;
+  .menu-icon {
+    @include hamburger($sos-red);
+  }
+}
+img.logo-mobile {
+  height: 40px;
+}
 nav.top-bar {
   background: white;
   div.top-bar-left {
@@ -13,7 +25,7 @@ nav.top-bar {
       justify-content: flex-end;
     }
     section {
-      flex-basis: 60%;
+      flex-basis: 50%;
       height: 3.5em;
       .input-group {
         height: 3.5rem;
@@ -22,39 +34,91 @@ nav.top-bar {
         }
       }
       form {
+        .input-group-field {
+          border-color: $sos-red;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+          // background: $light-gray;
+          color: white;
+          box-shadow: none;
+          // border: none;
+          border-right: 0;
+        }
         width: 100%;
+        input#searchsubmit {
+          background: none;
+          border: 1px solid $sos-red;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+          border-radius: 0;
+          color: $sos-red;
+        }
       }
       input {
         max-width: 100%;
       }
     }
     div.basket-account {
-      flex-basis: 40%;
+      flex-basis: 50%;
       justify-content: space-around;
       .button {
+        background: none;
+        color: $sos-red;
         flex-basis: 44%;
         margin: 0;
         font-size: 1rem;
         line-height: 1.5rem;
+        &:hover {
+          border-bottom: 1px solid $sos-red;
+          // color: white;
+        }
         span.basket-count {
-          background: white;
           color: $sos-red;
           font-weight: bold;
           padding: .2rem .5rem;
-          border-radius: 50%;
           margin-left: 5px;
         }
       }
       #logout-dropdown {
         width: rem-calc(140px);
         .button {
+          background: $sos-red;
+          color: white;
           width: 100%;
+          &:hover {
+            color: $sos-red;
+            background: none;
+          }
+        }
+      }
+      #login-dropdown {
+        form {
+          label {
+            margin-bottom: .5rem;
+          }
+          input {
+            max-width: 100%;
+          }
+          .button {
+            border: 1px solid $sos-red;
+            font-weight: bold;
+            width: 100%;
+            &:hover {
+              background: $sos-red;
+              color: white;
+            }
+          }
         }
       }
     }
   }
 }
+
+
 // Hero
+// --------------
 .hero {
   height: calc( 100vh - 183px );
   background: url("http://localhost/sosmusictools/wp-content/themes/FoundationPress/dist/assets/images/hero.jpg");
@@ -87,7 +151,10 @@ nav.top-bar {
     background: $sos-red-hover;
   }
 }
+
+
 // Homepage
+// --------------
 .home h1, .home h2, .home h3, .home .woocommerce ul.products li.product .price {
   text-align: center;
 }
@@ -110,7 +177,10 @@ div.featured-home {
     }
   }
 }
+
+
 // Product Page
+// --------------
 ul.tabs {
   border: none;
 }
@@ -130,14 +200,16 @@ aside.sidebar {
     margin-bottom: 1rem;
     padding: 1rem;
     a.sos-review {
-      background: #dd0000;
+      background: $sos-red;
       color: white;
       text-align: center;
     }
   }
 }
 
+
 // Shop page product items
+// --------------
 .woocommerce ul.products li.product h2.woocommerce-loop-product__title, span.price {
   padding-left: 1rem;
 }
@@ -152,46 +224,15 @@ li.card {
 h4.product_category_title {
   font-size: 0.7rem;
   color: white;
-  background: #333;
+  background: $dark-gray;
   padding: 3px;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
 }
 
-/* Flexbox on WooCommerce archive products */
-// Change to home only
-.woocommerce .products ul,
-.woocommerce ul.products {
-  // this fixes height of products on shop pages
-  display: block;
-
-  @include breakpoint(large) {
-  display: flex;
-
-  }
-   flex-flow: row wrap;
-}
-.home .woocommerce .products ul,
-.home .woocommerce ul.products {
-  // display: block;
-}
-.woocommerce ul.products li.product,
-.woocommerce-page ul.products li.product {
-   display: flex;
-   flex-flow: column nowrap;
-   border: 1px solid #cbcbcb;
-   box-sizing: border-box;
-}
-.woocommerce ul.products li.product .button {
-   margin-top: auto;
-   display: table;
-}
-.home .woocommerce ul.products li.product,
-.home .woocommerce-page ul.products li.product {
-  margin-bottom: 0;
-}
 // Shop Page Sidebar
+// --------------
 aside.sidebar section.widget {
   h6 {
     display: block;
@@ -204,7 +245,9 @@ aside.sidebar section.widget {
     margin-left: 0;
   }
 }
+
 // Add to basket button
+// --------------
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
   color: black;
   font-weight: 400;
@@ -213,7 +256,29 @@ aside.sidebar section.widget {
   letter-spacing: 1px;
 }
 
+
+// Flexbox for Shop Products
+// --------------
+.woocommerce ul.products {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  li {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $medium-gray;
+    .woocommerce-LoopProduct-link {
+      flex: 1 0 auto;
+    }
+    .button {
+      margin-top: auto;
+      display: table;
+    }
+  }
+}
+
 // Footer
+// --------------
 .footer-container {
   @include xy-grid-container;
   border-top: 1px solid $medium-gray;
@@ -243,7 +308,10 @@ aside.sidebar section.widget {
     padding: 0;
   }
 }
+
+
 /* Icons */
+// --------------
 .fa-shopping-basket:before, .fa-sign-out-alt:before {
   padding-right: 5px;
 }
@@ -251,7 +319,7 @@ aside.sidebar section.widget {
   position: relative;
   display: flex;
   &:before {
-    color: white;
+    color: $sos-red;
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position: absolute;
@@ -272,7 +340,9 @@ aside.sidebar section.widget {
   padding-right: 10px;
 }
 
+
 // My Account
+// --------------
 .woocommerce-account .woocommerce {
   margin-top: 2rem;
   nav.woocommerce-MyAccount-navigation {
@@ -331,10 +401,35 @@ aside.sidebar section.widget {
     }
   }
 }
-
+// Medium Only
+// --------------
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .site-navigation {
+    flex-wrap: wrap;
+    .top-bar-title {
+      display: flex;
+      justify-content: center;
+    }
+    .top-bar-right {
+      flex-flow: wrap!important;
+      justify-content: center;
+      padding: 0 1rem 0 1rem!important;
+      section#search-3 {
+        flex-basis: 100%!important;
+      }
+      div.basket-account {
+        flex-basis: 100%!important;
+        .button {
+          flex-basis: 50%!important;
+        }
+      }
+    }
+  }
+}
 // Mobile Only
+// --------------
 @media only screen and (max-width: 40em) {
   .site-navigation {
-    display: none;
+    // display: none;
   }
 }
