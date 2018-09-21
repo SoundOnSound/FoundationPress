@@ -1,5 +1,3 @@
-
-
 // Navigation
 // --------------
 .title-bar {
@@ -166,14 +164,16 @@ div.featured-home {
   }
   > h2 {
     padding: 1rem;
-    background: $sos-red;
-    color: white;
+    // background: $sos-red;
+    // color: white;
+    color: $sos-red;
     margin: 2rem 0;
     text-transform: uppercase;
     font-size: 1.5rem;
     letter-spacing: 2px;
     a {
-      color: white;
+      // color: white;
+      color: $sos-red;
     }
   }
 }
@@ -401,6 +401,13 @@ aside.sidebar section.widget {
     }
   }
 }
+// Large And Up
+// --------------
+@media screen and (min-width: 64em) {
+  .woocommerce ul.products {
+    justify-content: flex-start;
+  }
+}
 // Medium Only
 // --------------
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -428,8 +435,15 @@ aside.sidebar section.widget {
 }
 // Mobile Only
 // --------------
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 39.9375em) {
   .site-navigation {
     // display: none;
+  }
+  .title-bar-left img {
+    @include horizontal-center;
+    top: 8px;
+  }
+  header.site-header {
+    padding-bottom: 1rem;
   }
 }

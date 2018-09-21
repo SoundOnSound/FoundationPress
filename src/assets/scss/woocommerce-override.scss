@@ -1,0 +1,26 @@
+// woocommerce Style Fixes
+.woocommerce .products ul::after, .woocommerce .products ul::before, .woocommerce ul.products::after, .woocommerce ul.products::before {
+  // Fixes products item alignment on mobile.
+  display: none;
+}
+// General Shop Items
+.woocommerce .added_to_cart {
+  background: $sos-red;
+  color: white;
+  text-align: center;
+  padding: 1rem!important;
+  letter-spacing: 1px;
+  &:hover {
+    color: white;
+  }
+}
+// Buttons
+.woocommerce .checkout-button, .woocommerce .single_add_to_cart_button {
+  background-color: $sos-red!important;
+}
+
+form.cart {
+  input {
+    height: 48px;
+  }
+}
