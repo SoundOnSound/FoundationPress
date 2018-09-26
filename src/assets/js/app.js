@@ -27,11 +27,24 @@ $(document).foundation();
 // dashboardIcon.classList.add(fa, faClass);
 // dashboard.appendChild(dashboardIcon);
 
-// Prevents link on Manufacturer menu item. Change ID on Live
-let manufacturerLink = document.querySelector('#menu-item-128 a');
-manufacturerLink.addEventListener('click', function(e) {
-  e.preventDefault();
-})
+// Prevents link on Manufacturer menu item. Three vars is catch all for local and remote, desktop and mobile.
+let manufacturerLinkLocal = document.querySelector('#menu-item-128 a');
+let manufacturerLinkRemote = document.querySelector('#menu-item-146 a');
+let manufacturerLinkRemoteMobile = document.querySelector('#menu-item-161 a');
+
+const preventClick = [ manufacturerLinkLocal, manufacturerLinkRemote, manufacturerLinkRemoteMobile ];
+
+preventClick.forEach(function(link) {
+  if( link ) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+  }
+});
+
+// manufacturerLink.addEventListener('click', function(e) {
+//   e.preventDefault();
+// });
 
 // Correctly assign last class to last li item on homepage
 let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');

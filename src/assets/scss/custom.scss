@@ -436,14 +436,14 @@ aside.sidebar section.widget {
 // Mobile Only
 // --------------
 @media only screen and (max-width: 39.9375em) {
-  .site-navigation {
-    // display: none;
-  }
-  .title-bar-left img {
-    @include horizontal-center;
-    top: 8px;
-  }
-  header.site-header {
-    padding-bottom: 1rem;
+  .site-title-bar {
+    height: rem-calc(90px);
+    position: relative;
+    span.site-mobile-title {
+      @include absolute-center;
+      img {
+        height: rem-calc(60px);
+      }
+    }
   }
 }
