@@ -30,8 +30,9 @@
 						<div class="title-bar-left">
 							<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 							<span class="site-mobile-title title-bar-title">
-								<img class="logo-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sosmusictools-logo.svg" alt="SOS Music Tools Logo" width="" height="40">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+									<img class="logo-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sosmusictools-logo.svg" alt="SOS Music Tools Logo" width="" height="40">
+								</a>
 							</span>
 						</div>
 					</div>

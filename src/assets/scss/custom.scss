@@ -156,6 +156,7 @@ nav.top-bar {
 .home h1, .home h2, .home h3, .home .woocommerce ul.products li.product .price {
   text-align: center;
 }
+
 // Featured zones on Homepage
 div.featured-home {
   &:nth-child(odd) {
@@ -177,7 +178,9 @@ div.featured-home {
     }
   }
 }
-
+.home div.cell .woocommerce ul.products li.product {
+  margin-bottom: 0;
+}
 
 // Product Page
 // --------------
@@ -431,6 +434,16 @@ aside.sidebar section.widget {
         }
       }
     }
+  }
+}
+// Medium Down
+// --------------
+@media only screen and (max-width: 39.9375em) {
+  .home div.cell .woocommerce ul.products li.product:nth-child(1),
+  .home div.cell .woocommerce ul.products li.product:nth-child(2),
+  .home div.cell .woocommerce ul.products li.product:nth-child(3),
+  .home div.cell .woocommerce ul.products li.product:nth-child(4) {
+    margin-bottom: 2rem;
   }
 }
 // Mobile Only
