@@ -18,9 +18,129 @@
 .woocommerce .checkout-button, .woocommerce .single_add_to_cart_button {
   background-color: $sos-red!important;
 }
-
+.woocommerce-message a.button {
+  background: $sos-red;
+  color: white;
+  border-radius: 0;
+  &:hover {
+    background: $sos-red;
+    color: white;
+  }
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 10px;
+    content: "\f291";
+  }
+}
+// Widgets
+#woocommerce_product_search-2, #woocommerce_product_search-3 {
+  form.woocommerce-product-search {
+    display: flex;
+    max-height: 50px;
+    height: 100%;
+    input.search-field {
+      flex-basis: 80%;
+      // align-self: stretch;
+      height: rem-calc(50px);
+      margin-bottom: 0;
+    }
+    button {
+      flex-basis: 20%;
+      align-self: stretch;
+      background: $sos-red;
+      border-radius: 0;
+      color: white;
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        padding-right: 5px;
+        content: "\f002";
+      }
+    }
+  }
+}
 form.cart {
   input {
     height: 48px;
   }
+}
+// Page Numbers
+nav.woocommerce-pagination ul.page-numbers {
+  li {
+    height: 3rem;
+    width: 5rem;
+    span, a {
+      line-height: 2rem;
+    }
+    span.current {
+      height: 100%;
+      background: $sos-red;
+      color: white;
+    }
+    a {
+      height: 100%;
+    }
+  }
+}
+// Checkout
+// Coupon
+.woocommerce-cart table.cart td.actions {
+  div.coupon {
+    width: 310px;
+    input, button {
+      width: rem-calc(150px);
+    }
+    input {
+      height: rem-calc(48px);
+    }
+  }
+  button.button {
+    width: rem-calc(150px);
+    background: $sos-red;
+    color: white;
+    border-radius: 0;
+  }
+}
+// Proceed button
+.woocommerce .cart_totals .wc-proceed-to-checkout .checkout-button {
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 5px;
+    content: "\f09d";
+  }
+}
+// Place Order Button
+#place_order {
+  background: $sos-red;
+  color: white;
+  border-radius: 0;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 10px;
+    content: "\f09d";
+  }
+}
+// Order Table (Checkout)
+.woocommerce table.shop_table {
+  border-collapse: collapse;
+  th, tr, td {
+    border: 1px solid $medium-gray;
+    padding: 1rem;
+  }
+  thead {
+    background: $sos-red;
+    color: white;
+  }
+  tfoot {
+    background: $light-gray;
+  }
+}
+// Payment Method Box
+.woocommerce #payment {
+  background: white;
+  border: 1px solid $medium-gray;
+  border-radius: 0;
 }

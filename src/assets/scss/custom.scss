@@ -13,6 +13,24 @@ nav.top-bar {
   background: white;
   div.top-bar-left {
     flex: 3 1 auto;
+    ul#menu-main-menu {
+      background-color: $sos-red;
+      li.menu-item {
+        a {
+          font-size: .8rem;
+          text-transform: uppercase;
+          color: white;
+          letter-spacing: 2px;
+          &:hover {
+            background-color: $sos-red;
+            opacity: .8;
+          }
+        }
+        ul {
+          background-color: $sos-red;
+        }
+      }
+    }
   }
   div.top-bar-right {
     display: flex;
@@ -37,11 +55,7 @@ nav.top-bar {
           border-top: 0;
           border-right: 0;
           border-left: 0;
-          // background: $light-gray;
-          color: white;
           box-shadow: none;
-          // border: none;
-          border-right: 0;
         }
         width: 100%;
         input#searchsubmit {
@@ -145,7 +159,7 @@ nav.top-bar {
 }
 .button {
   background: $sos-red;
-  &:hover {
+  &:hover, &:focus {
     background: $sos-red-hover;
   }
 }
@@ -178,10 +192,6 @@ div.featured-home {
     }
   }
 }
-.home div.cell .woocommerce ul.products li.product {
-  margin-bottom: 0;
-}
-
 // Product Page
 // --------------
 ul.tabs {
@@ -201,6 +211,7 @@ aside.sidebar {
   div.product-sidebar, section.widget:not(.widget_search) {
     background: #f5f5f5;
     margin-bottom: 1rem;
+    // border: 1px solid $sos-red;
     padding: 1rem;
     a.sos-review {
       background: $sos-red;
@@ -276,6 +287,32 @@ aside.sidebar section.widget {
     .button {
       margin-top: auto;
       display: table;
+    }
+  }
+}
+.home .woocommerce ul.products {
+  justify-content: space-between;
+}
+.home .woocommerce .featured {
+  ul.products {
+    li.product {
+      margin: 0;
+      flex-basis: 24%;
+      @include breakpoint(medium down) {
+        flex-basis: 48%;
+      }
+    }
+  }
+}
+.home .woocommerce .featured-home {
+  ul.columns-6 {
+    li.product {
+      float: none;
+      margin: 0;
+      flex-basis: 16%;
+      @include breakpoint(medium down) {
+        flex-basis: 48%;
+      }
     }
   }
 }
@@ -445,6 +482,10 @@ aside.sidebar section.widget {
   .home div.cell .woocommerce ul.products li.product:nth-child(4) {
     margin-bottom: 2rem;
   }
+  .home .woocommerce div.featured ul.products li.product:nth-child(3),
+  .home .woocommerce div.featured ul.products li.product:nth-child(4) {
+    margin-bottom: 0!important;
+  }
 }
 // Mobile Only
 // --------------
@@ -458,5 +499,8 @@ aside.sidebar section.widget {
         height: rem-calc(60px);
       }
     }
+  }
+  .woocommerce .woocommerce-ordering {
+    width: 100%;
   }
 }

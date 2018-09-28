@@ -41,7 +41,7 @@
             // Check loop has has posts
             if ( $loop->have_posts() ) {
               // Out put HTML for Loop (The above conditional insures the HTML is output only if there's featured products in the system)
-              echo "<div class=\"featured-home\"><h2>Featured Products</h2><ul class=\"products columns-4\">";
+              echo "<div class=\"featured-home featured\"><h2>Featured Products</h2><ul class=\"products columns-4\">";
                 // Run loop
                 while ( $loop->have_posts() ) : $loop->the_post();
                   wc_get_template_part( 'content', 'product' );
