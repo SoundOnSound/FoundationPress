@@ -51,6 +51,7 @@
       background: $sos-red;
       border-radius: 0;
       color: white;
+      padding: .8rem;
       &:before {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -58,6 +59,31 @@
         content: "\f002";
       }
     }
+  }
+}
+// Basket Footer Widget
+#woocommerce_widget_cart-2 {
+  .woocommerce-mini-cart__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons .button {
+    background: $sos-red;
+    color: white;
+    flex-basis: 49%;
+    margin: 0;
+  }
+  .wc-forward:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 10px;
+    content: "\f291";
+  }
+  .checkout:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 10px;
+    content: "\f09d";
   }
 }
 form.cart {
@@ -69,7 +95,7 @@ form.cart {
 nav.woocommerce-pagination ul.page-numbers {
   li {
     height: 3rem;
-    width: 5rem;
+    width: 3rem;
     span, a {
       line-height: 2rem;
     }
