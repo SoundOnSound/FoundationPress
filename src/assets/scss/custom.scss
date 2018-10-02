@@ -354,32 +354,38 @@ aside.sidebar {
 .footer-grid {
   @include xy-grid;
   padding: rem-calc(30px) 0;
+
   section.widget {
     border-right: 1px solid $medium-gray;
     border-bottom: 0;
+
     &:last-child {
       border-right: 0;
     }
-    .custom-html-widget {
-      text-align: center!important;
-    }
     @include xy-cell();
-  @include breakpoint(small) {
-    @include xy-cell(12);
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+    @include breakpoint(large) {
+      @include xy-cell(3);
+    }
   }
-  @include breakpoint(medium) {
-    @include xy-cell(6);
+  #custom_html-2 {
+    position: relative;
+    .custom-html-widget {
+      @include absolute-center;
+    }
   }
-  @include breakpoint(large) {
-    @include xy-cell(3);
-  }
-}
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  #woocommerce_product_search-3 {
+
+  #woocommerce_product_search-3, #woocommerce_widget_cart-2 {
     padding-right: 2rem;
   }
 }
@@ -529,6 +535,9 @@ aside.sidebar {
       margin-bottom: 2rem;
       padding-bottom: 2rem;
     }
+  }
+  #woocommerce_product_search-3, #woocommerce_widget_cart-2 {
+    padding-right: 2rem;
   }
 }
 
