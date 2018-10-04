@@ -208,6 +208,49 @@ span.price span.woocommerce-Price-amount, .woocommerce p.price span.woocommerce-
     font-size: 1rem;
   }
 }
+// Email Sign Up Homepage
+div.mail {
+  background: $light-gray;
+  padding: 1rem 0 3rem 0;
+  @include breakpoint(medium down) {
+    padding: 2rem;
+  }
+  aside.mail-sign-up {
+    margin: 0 auto;
+    h2 {
+      color: $sos-red;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    label {
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+    .clear {
+      text-align: center;
+    }
+    #mc-embedded-subscribe {
+      background: $sos-red;
+      color: white;
+      @include breakpoint(medium down) {
+        width: 100%;
+      }
+    }
+    #mc_embed_signup {
+      h4 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      input {
+        padding: 1rem;
+        height: 3rem;
+      }
+    }
+  }
+}
 // Product Page
 // --------------
 ul.tabs {
@@ -344,6 +387,20 @@ aside.sidebar {
 
 // Footer
 // --------------
+footer.footer {
+  .grid-x {
+    background: black;
+    display: block;
+    padding: 3rem 0 1rem 0;
+    p {
+      color: $dark-gray;
+      font-size: .8rem;
+      font-weight: bold;
+      text-align: center;
+      // padding: 2rem 1rem;
+    }
+  }
+}
 .footer-container {
   @include xy-grid-container;
   border-top: 1px solid $medium-gray;

@@ -9,8 +9,8 @@
         <div class="hero-container">
           <h1>SOS Music Tools</h1>
           <h2>A One Stop Shop For Instant Software Downloads,<br /> Pro Tips And All Things Audio.</h2>
-          <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">What does your next project need?</a>
-          <h3>Check Out Our Featured Products Below</h3>
+          <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">View The Full Catalogue</a>
+          <h3>Or Check Out Our Featured Products Below</h3>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
 <div class="grid-container fluid home">
   <div class="grid-x">
     <div class="cell">
-    <div class="cell">
+    <!-- <div class="cell"> -->
       <!-- Set up woocommerce div to correctly inherit styles -->
       <div class="woocommerce">
         <?php
@@ -51,7 +51,14 @@
             }
             wp_reset_postdata();
         ?>
-
+        <!-- Widget Area -->
+        <?php if( is_active_sidebar( 'homepage-widgets' ) ) : ?>
+          <div class="grid-x mail">
+            <aside class="mail-sign-up cell large-6 medium-12 small-12">
+          		<?php dynamic_sidebar( 'homepage-widgets' ); ?>
+          	</aside>
+          </div>
+        <?php endif; ?>
         <?php
         // Build array for product Categories loop
         $args = array(

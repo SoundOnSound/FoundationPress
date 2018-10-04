@@ -44,6 +44,18 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 			)
 		);
 
+		register_sidebar(
+			array(
+				'id'            => 'homepage-widgets',
+				'name'          => __( 'Homepage widgets', 'foundationpress' ),
+				'description'   => __( 'Drag widgets to this homepage container', 'foundationpress' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			)
+		);
+
 	}
 
 	add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );
