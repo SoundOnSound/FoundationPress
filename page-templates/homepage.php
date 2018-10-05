@@ -9,7 +9,7 @@
         <div class="hero-container">
           <h1>SOS Music Tools</h1>
           <h2>A One Stop Shop For Instant Software Downloads,<br /> Pro Tips And All Things Audio.</h2>
-          <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>/shop">View The Full Catalogue</a>
+          <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>shop">View The Full Catalogue</a>
           <h3>Or Check Out Our Featured Products Below</h3>
         </div>
       </div>
@@ -78,7 +78,7 @@
             // Check loop has has posts
             if ( $loopCat->have_posts() ) {
               // Out put HTML for Loop (The above conditional ensures the HTML is output only if there's products within the category in the system)
-              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-tag/fabfilter/\">FabFilter Software</a></h2><ul class=\"products columns-6\">";
+              echo "<div class=\"featured-home\"><h2><a href=\"" . esc_url( home_url( '/' ) ) . "product-tag/fabfilter/\">FabFilter Software</a></h2><ul class=\"products columns-6\">";
                 // Run loop
                 while ( $loopCat->have_posts() ) : $loopCat->the_post();
                     wc_get_template_part( 'content', 'product' );
@@ -108,7 +108,7 @@
             // Check loop has has posts
             if ( $loopCat->have_posts() ) {
               // Out put HTML for Loop (The above conditional ensures the HTML is output only if there's products within the category in the system)
-              echo "<div class=\"featured-home\"><h2><a href=\"/sosmusictools/product-tag/acon/\">Acon Software</a></h2><ul class=\"products columns-6\">";
+              echo "<div class=\"featured-home\"><h2><a href=\"" . esc_url( home_url( '/' ) ) . "product-tag/acon/\">Acon Software</a></h2><ul class=\"products columns-6\">";
                 // Run loop
                 while ( $loopCat->have_posts() ) : $loopCat->the_post();
                     wc_get_template_part( 'content', 'product' );

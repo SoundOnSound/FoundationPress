@@ -14,16 +14,25 @@ nav.top-bar {
   div.top-bar-left {
     flex: 3 1 auto;
     ul#menu-main-menu {
-      background-color: $sos-red;
+      background-color: white;
+      border-bottom: 1px solid $sos-red;
       li.menu-item {
         a {
           font-size: .8rem;
           text-transform: uppercase;
-          color: white;
+          color: $sos-red;
           letter-spacing: 2px;
           &:hover {
-            background-color: $sos-red;
-            opacity: .8;
+            background-color: white;
+            // opacity: .8;
+            color: black;
+          }
+        }
+        ul {
+          background: white;
+          li {
+            border: 1px solid $sos-red;
+            border-top: 0;
           }
         }
       }
