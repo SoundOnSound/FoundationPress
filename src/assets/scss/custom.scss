@@ -9,10 +9,13 @@
 img.logo-mobile {
   height: 40px;
 }
+nav.top-nav {
+  padding: 1rem 0;
+}
 nav.top-bar {
   background: white;
   div.top-bar-left {
-    flex: 3 1 auto;
+    flex: 5 1 auto;
     ul#menu-main-menu {
       background-color: white;
       border-bottom: 1px solid $sos-red;
@@ -45,12 +48,13 @@ nav.top-bar {
     display: flex;
     flex-flow: row;
     flex: 1 1 auto;
+    align-items: flex-end;
     section, div.basket-account, div.input-group {
       display: flex;
       justify-content: flex-end;
     }
     section {
-      flex-basis: 50%;
+      flex-basis: 55%;
       height: 3.5em;
       .input-group {
         height: 3.5rem;
@@ -82,18 +86,21 @@ nav.top-bar {
       }
     }
     div.basket-account {
-      flex-basis: 50%;
+      flex-basis: 45%;
       justify-content: space-around;
       .button {
         background: none;
         color: $sos-red;
-        flex-basis: 44%;
+        flex-basis: 50%;
         margin: 0;
         font-size: 1rem;
         line-height: 1.5rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
         &:hover {
           border-bottom: 1px solid $sos-red;
-          // color: white;
         }
         span.basket-count {
           color: $sos-red;
@@ -108,6 +115,7 @@ nav.top-bar {
           background: $sos-red;
           color: white;
           width: 100%;
+          justify-content: center;
           &:hover {
             color: $sos-red;
             background: none;
@@ -133,6 +141,9 @@ nav.top-bar {
           }
         }
       }
+      #my-account-header {
+        justify-content: flex-start;
+      }
     }
   }
 }
@@ -141,9 +152,10 @@ nav.top-bar {
 // Hero
 // --------------
 .hero {
-  height: calc( 100vh - 183px );
+  height: calc( 100vh - 215px );
   background-image: url("../images/hero.jpg");
   background-repeat: no-repeat;
+  background-position: 0% 90%;
   background-size: cover;
   color: white;
   position: relative;
@@ -180,6 +192,7 @@ nav.top-bar {
 // --------------
 .home h1, .home h2, .home h3, .home .woocommerce ul.products li.product .price {
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 // Featured zones on Homepage
@@ -288,7 +301,20 @@ aside.sidebar {
     }
   }
 }
-
+// Manufacturers Page
+// --------------
+div.product_tags {
+  text-align: center;
+  padding-top: 3rem;
+  a {
+    color: $sos-red;
+    &:hover {
+      color: black;
+      text-decoration: underline;
+      transition: .5s;
+    }
+  }
+}
 
 // Shop page product items
 // --------------
@@ -362,13 +388,17 @@ aside.sidebar {
       flex: 1 0 auto;
     }
     .button {
-      margin-top: auto;
       display: table;
     }
   }
 }
 .home .woocommerce ul.products {
   justify-content: space-between;
+  li.product {
+    .button {
+      display: none;
+    }
+  }
 }
 .home .woocommerce .featured {
   ul.products {
@@ -481,7 +511,7 @@ footer.footer {
 }
 
 .fa-user:before {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 .fa-windows:before, .fa-apple:before {
   padding-right: 10px;
@@ -575,6 +605,10 @@ footer.footer {
         flex-basis: 100%!important;
         .button {
           flex-basis: 50%!important;
+          justify-content: space-around!important;
+        }
+        #my-account-header {
+          justify-content: center!important;
         }
       }
     }

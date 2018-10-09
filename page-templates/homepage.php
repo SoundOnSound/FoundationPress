@@ -7,10 +7,8 @@
     <div class="cell">
       <div class="hero">
         <div class="hero-container">
-          <h1>SOS Music Tools</h1>
           <h2>A One Stop Shop For Instant Software Downloads,<br /> Pro Tips And All Things Audio.</h2>
           <a class="button large" href="<?php echo esc_url( home_url( '/' ) ); ?>shop">View The Full Catalogue</a>
-          <h3>Or Check Out Our Featured Products Below</h3>
         </div>
       </div>
     </div>

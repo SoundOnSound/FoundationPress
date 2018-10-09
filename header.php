@@ -56,7 +56,7 @@
 									<a class="basket-dropdown" href="<?php // echo wc_get_cart_url(); ?>" title="<?php // _e( 'View Your Shopping Basket' ); ?>"><?php // echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php // echo WC()->cart->get_cart_total(); ?></a>
 								</div> -->
 								<?php if (is_user_logged_in()) : ?>
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="logout-dropdown"><i class="fa fa-user"></i>Account</a>
+									<a id="my-account-header" href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="logout-dropdown"><i class="fa fa-user"></i>Account</a>
 									<div class="dropdown-pane" id="logout-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
 								  	<a class="button" href="<?php echo wp_logout_url(); ?>"><i class="fas fa-sign-out-alt"></i>Logout</a>
 									</div>

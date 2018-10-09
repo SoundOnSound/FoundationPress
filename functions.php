@@ -65,7 +65,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	ob_start();
 
 	?>
-	
+
 	<span class="basket-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
 	<?php
 	$fragments['span.basket-count'] = ob_get_clean();
@@ -110,3 +110,10 @@ function category_single_product(){
 <?php }
 }
 add_action( 'woocommerce_before_shop_loop_item_title', 'category_single_product', 5 );
+
+// Move WooCommerce Single Product Title
+function move_woo_title() {
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 15 );
+}
+add_action('woocommerce_before_single_product_summary', 'move_woo_title');
