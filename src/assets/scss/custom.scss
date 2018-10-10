@@ -197,16 +197,13 @@ nav.top-bar {
 
 // Featured zones on Homepage
 div.featured-home {
+  padding-bottom: 2rem;
   &:nth-child(odd) {
-    // background: #f5f5f5;
-    // padding: 0 1rem 1rem 1rem;
+    background: lightblue;
   }
   > h2 {
-    padding: 1rem;
-    // background: $sos-red;
-    // color: white;
+    padding: 4rem 0 3rem 0;
     color: $sos-red;
-    margin: 2rem 0;
     text-transform: uppercase;
     font-size: 1.5rem;
     letter-spacing: 2px;
@@ -216,6 +213,7 @@ div.featured-home {
     }
   }
   ul.products {
+    margin-bottom: 0;
     li.product {
       h2.woocommerce-loop-product__title {
         font-size: 1.3rem;
@@ -233,7 +231,7 @@ span.price span.woocommerce-Price-amount, .woocommerce p.price span.woocommerce-
 // Email Sign Up Homepage
 div.mail {
   background: $light-gray;
-  padding: 1rem 0 3rem 0;
+  padding: 1rem 0 4rem 0;
   @include breakpoint(medium down) {
     padding: 2rem;
   }
@@ -241,10 +239,17 @@ div.mail {
     margin: 0 auto;
     h2 {
       color: $sos-red;
-      margin: 2rem 0;
+      padding: 3rem 0 2rem 0;
       text-transform: uppercase;
       font-size: 1.5rem;
       letter-spacing: 2px;
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 3rem;
+        content: '\f0e0';
+        display: block;
+        margin-bottom: .5rem;
+      }
     }
     label {
       font-size: 1rem;
@@ -393,7 +398,11 @@ aside.sidebar {
   }
 }
 .home .woocommerce ul.products {
-  justify-content: space-between;
+  @include breakpoint(medium down) {
+    justify-content: space-between;
+  }
+  justify-content: space-around;
+  padding-bottom: 2rem;
   li.product {
     .button {
       display: none;

@@ -14,7 +14,7 @@
     </div>
   </div>
 </div>
-<div class="grid-container fluid home">
+<div class="grid-container full home">
   <div class="grid-x">
     <div class="cell">
     <!-- <div class="cell"> -->
