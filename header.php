@@ -61,7 +61,7 @@
 								  	<a class="button" href="<?php echo wp_logout_url(); ?>"><i class="fas fa-sign-out-alt"></i>Logout</a>
 									</div>
 								<?php else : ?>
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button" data-toggle="login-dropdown"><i class="fa fa-user"></i>Login</a>
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>/my-account" class="button login" data-toggle="login-dropdown"><i class="fa fa-user"></i>Login</a>
 										<div class="dropdown-pane" id="login-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
 										 <?php wp_login_form( $args ); ?>
 										</div>

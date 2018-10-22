@@ -109,6 +109,9 @@ nav.top-bar {
           margin-left: 5px;
         }
       }
+      .login {
+        justify-content: flex-start;
+      }
       #logout-dropdown {
         width: 11.5rem;
         .button {
@@ -215,6 +218,7 @@ div.featured-home {
   ul.products {
     margin-bottom: 0;
     li.product {
+      background: white;
       h2.woocommerce-loop-product__title {
         font-size: 1.3rem;
       }
