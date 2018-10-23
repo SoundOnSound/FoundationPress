@@ -403,7 +403,7 @@ aside.sidebar {
 }
 .home .woocommerce ul.products {
   @include breakpoint(medium down) {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   justify-content: space-around;
   padding-bottom: 2rem;

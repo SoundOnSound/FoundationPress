@@ -28,41 +28,41 @@ $(document).foundation();
 // dashboard.appendChild(dashboardIcon);
 
 // Prevents link on Manufacturer menu item. Three vars is catch all for local and remote, desktop and mobile.
-let manufacturerLinkLocal = document.querySelector('#menu-item-128 a');
-let manufacturerLinkRemote = document.querySelector('#menu-item-146 a');
-let manufacturerLinkRemoteMobile = document.querySelector('#menu-item-161 a');
-
-const preventClick = [ manufacturerLinkLocal, manufacturerLinkRemote, manufacturerLinkRemoteMobile ];
-
-preventClick.forEach(function(link) {
-  if( link ) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-    });
-  }
-});
+// let manufacturerLinkLocal = document.querySelector('#menu-item-128 a');
+// let manufacturerLinkRemote = document.querySelector('#menu-item-146 a');
+// let manufacturerLinkRemoteMobile = document.querySelector('#menu-item-161 a');
+//
+// const preventClick = [ manufacturerLinkLocal, manufacturerLinkRemote, manufacturerLinkRemoteMobile ];
+//
+// preventClick.forEach(function(link) {
+//   if( link ) {
+//     link.addEventListener('click', function(e) {
+//       e.preventDefault();
+//     });
+//   }
+// });
 
 // manufacturerLink.addEventListener('click', function(e) {
 //   e.preventDefault();
 // });
 
-// Correctly assign last class to last li item on homepage
-let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
-// Check addLastClass is true to prevent error on pages that don't have addLastClass
-if( addLastClass ) {
-  addLastClass.classList.add('last');
-}
-
-let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-child');
-
-for( let i = 0; i < addLastClass6.length; i ++ ) {
-  addLastClass6[i].classList.add('last');
-}
-// Add button class to widget search submit for stlying purposes
-let productSearchSubmit = document.querySelector('.woocommerce-product-search button');
-if( productSearchSubmit ) {
-  productSearchSubmit.classList.add('button');
-}
+// // Correctly assign last class to last li item on homepage
+// let addLastClass = document.querySelector('ul.columns-4 li.product:last-child');
+// // Check addLastClass is true to prevent error on pages that don't have addLastClass
+// if( addLastClass ) {
+//   addLastClass.classList.add('last');
+// }
+//
+// let addLastClass6 = document.querySelectorAll('ul.columns-6 li.product:last-child');
+//
+// for( let i = 0; i < addLastClass6.length; i ++ ) {
+//   addLastClass6[i].classList.add('last');
+// }
+// // Add button class to widget search submit for stlying purposes
+// let productSearchSubmit = document.querySelector('.woocommerce-product-search button');
+// if( productSearchSubmit ) {
+//   productSearchSubmit.classList.add('button');
+// }
 
 // Assign coloured badges to product categories
 
