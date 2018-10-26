@@ -10,7 +10,7 @@ img.logo-mobile {
   height: 40px;
 }
 nav.top-nav {
-  padding: 1rem 0;
+  padding: 1rem 1rem 0 1rem;
 }
 nav.top-bar {
   background: white;
@@ -19,6 +19,7 @@ nav.top-bar {
     ul#menu-main-menu {
       background-color: white;
       border-bottom: 1px solid $sos-red;
+      padding-left: 1rem;
       li.menu-item {
         a {
           font-size: .8rem;
@@ -113,7 +114,7 @@ nav.top-bar {
         justify-content: flex-start;
       }
       #logout-dropdown {
-        width: 11.5rem;
+        width: 10.5rem;
         .button {
           background: $sos-red;
           color: white;
@@ -582,12 +583,23 @@ footer.footer {
       .woocommerce-MyAccount-navigation-link--edit-address a:before {
         content: "\f2b9";
       }
+      .woocommerce-MyAccount-navigation-link--payment-methods a:before {
+        content: "\f09d";
+      }
       .woocommerce-MyAccount-navigation-link--edit-account a:before {
         content: "\f007";
       }
       .woocommerce-MyAccount-navigation-link--customer-logout a:before {
         content: "\f2f5";
       }
+    }
+  }
+  td.woocommerce-orders-table__cell-order-actions {
+    .woocommerce-button {
+      display: block;
+      margin-bottom: 5px;
+      background-color: $sos-red;
+      color: white;
     }
   }
 }
