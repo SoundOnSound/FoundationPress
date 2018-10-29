@@ -307,7 +307,11 @@ aside.sidebar {
     a.sos-review {
       background: $sos-red;
       color: white;
+      font-weight: 600;
       text-align: center;
+      .fa-external-link-alt {
+        margin-left: 1rem;
+      }
     }
   }
 }

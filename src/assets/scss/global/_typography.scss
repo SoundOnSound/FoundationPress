@@ -1,0 +1,36 @@
+// Product Single
+.main-content div.product .woocommerce-tabs ul.tabs li a {
+  font-weight: 500;
+}
+.accordion-content {
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+.widget, .product-sidebar {
+  h6 {
+    text-align: center;
+  }
+}
+div.product-sidebar {
+  .fab {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h6 {
+    margin: .5rem 0 1.5rem 0;
+  }
+  ul {
+    line-height: 1.6rem;
+    li {
+      margin-bottom: .5rem;
+    }
+    li:nth-child(odd) {
+      // background: white;
+    }
+    li:nth-child(even) {
+      // background: red;
+    }
+  }
+}

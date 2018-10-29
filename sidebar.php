@@ -45,7 +45,7 @@
 		<?php if( get_field('sos_review_link') ): ?>
 			<div class="sidebar-widgets product-sidebar">
 				<h6>Read The Sound On Sound Review</h6>
-				<a class="button button-primary expanded sos-review" href='<?php the_field('sos_review_link'); ?>' target='_blank'>Read SOS Review</a>
+				<a class="button button-primary expanded sos-review" href='<?php the_field('sos_review_link'); ?>' target='_blank'>Read SOS Review<i class="fas fa-external-link-alt"></i></a>
 			<div>
 		<?php endif; ?>
 		<!-- End If is product -->
