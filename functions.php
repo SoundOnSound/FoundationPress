@@ -117,3 +117,10 @@ function move_woo_title() {
 	add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 15 );
 }
 add_action('woocommerce_before_single_product_summary', 'move_woo_title');
+
+// Move WooCommerce Single Product Price Below Product Short Description
+function move_woo_price() {
+	remove_Action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+}
+add_action('woocommerce_before_single_product_summary', 'move_woo_price');
