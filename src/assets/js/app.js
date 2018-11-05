@@ -11,6 +11,7 @@ import Foundation from 'foundation-sites';
 $(document).foundation();
 
 
+
 // // Get all <li> with class of product and assign variable
 // let productItem = document.querySelectorAll('li.product');
 // // Loop all <li>
