@@ -17,7 +17,8 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-
+	<!-- Google Tag Manager Disabled Javascript Fallback -->
+	<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
